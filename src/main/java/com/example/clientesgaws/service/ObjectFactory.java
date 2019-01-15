@@ -24,14 +24,54 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _EliminarPersona_QNAME = new QName("http://servicio.sga.example.com/", "eliminarPersona");
+    private final static QName _RegistrarPersona_QNAME = new QName("http://servicio.sga.example.com/", "registrarPersona");
+    private final static QName _EncontrarPersonaPorIdResponse_QNAME = new QName("http://servicio.sga.example.com/", "encontrarPersonaPorIdResponse");
+    private final static QName _ModificarPersona_QNAME = new QName("http://servicio.sga.example.com/", "modificarPersona");
     private final static QName _ListarPersonas_QNAME = new QName("http://servicio.sga.example.com/", "listarPersonas");
     private final static QName _ListarPersonasResponse_QNAME = new QName("http://servicio.sga.example.com/", "listarPersonasResponse");
+    private final static QName _EncontrarPersonaPorId_QNAME = new QName("http://servicio.sga.example.com/", "encontrarPersonaPorId");
+    private final static QName _ModificarPersonaResponse_QNAME = new QName("http://servicio.sga.example.com/", "modificarPersonaResponse");
+    private final static QName _RegistrarPersonaResponse_QNAME = new QName("http://servicio.sga.example.com/", "registrarPersonaResponse");
+    private final static QName _EliminarPersonaResponse_QNAME = new QName("http://servicio.sga.example.com/", "eliminarPersonaResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.example.clientesgaws.service
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link EliminarPersona }
+     * 
+     */
+    public EliminarPersona createEliminarPersona() {
+        return new EliminarPersona();
+    }
+
+    /**
+     * Create an instance of {@link RegistrarPersona }
+     * 
+     */
+    public RegistrarPersona createRegistrarPersona() {
+        return new RegistrarPersona();
+    }
+
+    /**
+     * Create an instance of {@link EncontrarPersonaPorIdResponse }
+     * 
+     */
+    public EncontrarPersonaPorIdResponse createEncontrarPersonaPorIdResponse() {
+        return new EncontrarPersonaPorIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link ModificarPersona }
+     * 
+     */
+    public ModificarPersona createModificarPersona() {
+        return new ModificarPersona();
     }
 
     /**
@@ -51,11 +91,79 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link EncontrarPersonaPorId }
+     * 
+     */
+    public EncontrarPersonaPorId createEncontrarPersonaPorId() {
+        return new EncontrarPersonaPorId();
+    }
+
+    /**
+     * Create an instance of {@link ModificarPersonaResponse }
+     * 
+     */
+    public ModificarPersonaResponse createModificarPersonaResponse() {
+        return new ModificarPersonaResponse();
+    }
+
+    /**
+     * Create an instance of {@link RegistrarPersonaResponse }
+     * 
+     */
+    public RegistrarPersonaResponse createRegistrarPersonaResponse() {
+        return new RegistrarPersonaResponse();
+    }
+
+    /**
+     * Create an instance of {@link EliminarPersonaResponse }
+     * 
+     */
+    public EliminarPersonaResponse createEliminarPersonaResponse() {
+        return new EliminarPersonaResponse();
+    }
+
+    /**
      * Create an instance of {@link Persona }
      * 
      */
     public Persona createPersona() {
         return new Persona();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarPersona }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.example.com/", name = "eliminarPersona")
+    public JAXBElement<EliminarPersona> createEliminarPersona(EliminarPersona value) {
+        return new JAXBElement<EliminarPersona>(_EliminarPersona_QNAME, EliminarPersona.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarPersona }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.example.com/", name = "registrarPersona")
+    public JAXBElement<RegistrarPersona> createRegistrarPersona(RegistrarPersona value) {
+        return new JAXBElement<RegistrarPersona>(_RegistrarPersona_QNAME, RegistrarPersona.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EncontrarPersonaPorIdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.example.com/", name = "encontrarPersonaPorIdResponse")
+    public JAXBElement<EncontrarPersonaPorIdResponse> createEncontrarPersonaPorIdResponse(EncontrarPersonaPorIdResponse value) {
+        return new JAXBElement<EncontrarPersonaPorIdResponse>(_EncontrarPersonaPorIdResponse_QNAME, EncontrarPersonaPorIdResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ModificarPersona }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.example.com/", name = "modificarPersona")
+    public JAXBElement<ModificarPersona> createModificarPersona(ModificarPersona value) {
+        return new JAXBElement<ModificarPersona>(_ModificarPersona_QNAME, ModificarPersona.class, null, value);
     }
 
     /**
@@ -74,6 +182,42 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://servicio.sga.example.com/", name = "listarPersonasResponse")
     public JAXBElement<ListarPersonasResponse> createListarPersonasResponse(ListarPersonasResponse value) {
         return new JAXBElement<ListarPersonasResponse>(_ListarPersonasResponse_QNAME, ListarPersonasResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EncontrarPersonaPorId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.example.com/", name = "encontrarPersonaPorId")
+    public JAXBElement<EncontrarPersonaPorId> createEncontrarPersonaPorId(EncontrarPersonaPorId value) {
+        return new JAXBElement<EncontrarPersonaPorId>(_EncontrarPersonaPorId_QNAME, EncontrarPersonaPorId.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ModificarPersonaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.example.com/", name = "modificarPersonaResponse")
+    public JAXBElement<ModificarPersonaResponse> createModificarPersonaResponse(ModificarPersonaResponse value) {
+        return new JAXBElement<ModificarPersonaResponse>(_ModificarPersonaResponse_QNAME, ModificarPersonaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarPersonaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.example.com/", name = "registrarPersonaResponse")
+    public JAXBElement<RegistrarPersonaResponse> createRegistrarPersonaResponse(RegistrarPersonaResponse value) {
+        return new JAXBElement<RegistrarPersonaResponse>(_RegistrarPersonaResponse_QNAME, RegistrarPersonaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarPersonaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.example.com/", name = "eliminarPersonaResponse")
+    public JAXBElement<EliminarPersonaResponse> createEliminarPersonaResponse(EliminarPersonaResponse value) {
+        return new JAXBElement<EliminarPersonaResponse>(_EliminarPersonaResponse_QNAME, EliminarPersonaResponse.class, null, value);
     }
 
 }

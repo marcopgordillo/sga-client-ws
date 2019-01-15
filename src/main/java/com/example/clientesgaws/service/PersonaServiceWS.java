@@ -3,6 +3,7 @@ package com.example.clientesgaws.service;
 
 import java.util.List;
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
@@ -26,6 +27,21 @@ public interface PersonaServiceWS {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns com.example.clientesgaws.service.Persona
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "encontrarPersonaPorId", targetNamespace = "http://servicio.sga.example.com/", className = "com.example.clientesgaws.service.EncontrarPersonaPorId")
+    @ResponseWrapper(localName = "encontrarPersonaPorIdResponse", targetNamespace = "http://servicio.sga.example.com/", className = "com.example.clientesgaws.service.EncontrarPersonaPorIdResponse")
+    @Action(input = "http://servicio.sga.example.com/PersonaServiceWS/encontrarPersonaPorIdRequest", output = "http://servicio.sga.example.com/PersonaServiceWS/encontrarPersonaPorIdResponse")
+    public Persona encontrarPersonaPorId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Persona arg0);
+
+    /**
+     * 
      * @return
      *     returns java.util.List<com.example.clientesgaws.service.Persona>
      */
@@ -35,5 +51,41 @@ public interface PersonaServiceWS {
     @ResponseWrapper(localName = "listarPersonasResponse", targetNamespace = "http://servicio.sga.example.com/", className = "com.example.clientesgaws.service.ListarPersonasResponse")
     @Action(input = "http://servicio.sga.example.com/PersonaServiceWS/listarPersonasRequest", output = "http://servicio.sga.example.com/PersonaServiceWS/listarPersonasResponse")
     public List<Persona> listarPersonas();
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "modificarPersona", targetNamespace = "http://servicio.sga.example.com/", className = "com.example.clientesgaws.service.ModificarPersona")
+    @ResponseWrapper(localName = "modificarPersonaResponse", targetNamespace = "http://servicio.sga.example.com/", className = "com.example.clientesgaws.service.ModificarPersonaResponse")
+    @Action(input = "http://servicio.sga.example.com/PersonaServiceWS/modificarPersonaRequest", output = "http://servicio.sga.example.com/PersonaServiceWS/modificarPersonaResponse")
+    public void modificarPersona(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Persona arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "eliminarPersona", targetNamespace = "http://servicio.sga.example.com/", className = "com.example.clientesgaws.service.EliminarPersona")
+    @ResponseWrapper(localName = "eliminarPersonaResponse", targetNamespace = "http://servicio.sga.example.com/", className = "com.example.clientesgaws.service.EliminarPersonaResponse")
+    @Action(input = "http://servicio.sga.example.com/PersonaServiceWS/eliminarPersonaRequest", output = "http://servicio.sga.example.com/PersonaServiceWS/eliminarPersonaResponse")
+    public void eliminarPersona(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Persona arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "registrarPersona", targetNamespace = "http://servicio.sga.example.com/", className = "com.example.clientesgaws.service.RegistrarPersona")
+    @ResponseWrapper(localName = "registrarPersonaResponse", targetNamespace = "http://servicio.sga.example.com/", className = "com.example.clientesgaws.service.RegistrarPersonaResponse")
+    @Action(input = "http://servicio.sga.example.com/PersonaServiceWS/registrarPersonaRequest", output = "http://servicio.sga.example.com/PersonaServiceWS/registrarPersonaResponse")
+    public void registrarPersona(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Persona arg0);
 
 }
